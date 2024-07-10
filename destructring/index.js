@@ -81,3 +81,21 @@ const person4 = {
 }
 
 displayPerson(person3);
+
+
+
+/////////// Fishter-yates algorithm /////////////////
+///// shuffle the item in arrays
+
+const cards = [1, "D", 2,3, "Q", 4,5, "A", 6,7, "K", 8,9,"L", 10,11]
+
+shuffle(cards);
+
+console.log(cards);
+function shuffle(array) {
+    for (let i = array.length -1; i > 0; i--) {
+        const random = Math.floor(Math.random() * (i + 1));
+        [array[i], array[random]] = [[array[random]], array[i]];
+    }
+
+}
